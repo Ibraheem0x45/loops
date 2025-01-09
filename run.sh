@@ -1,0 +1,5 @@
+hyperfine -i --shell=none --runs 5 --warmup 3 -n "Optimized Version (-O3)" "./optimized_version.o 40"
+hyperfine -i --shell=none --runs 5 --warmup 3 -n "Optimized Version (-O3 -mavx2)" "./optimized_version_avx.o 40"
+hyperfine -i --shell=none --runs 5 --warmup 3 -n "Original Version (-O3)" "./original_version.o 40"
+hyperfine -i --shell=none --runs 5 --warmup 3 -n "Casey's Version (-O3)" "./caseys_version.o 40"
+hyperfine -i --shell=none --runs 5 --warmup 3 -n "Casey's Version (-O3 -mavx2)" "./caseys_version_avx.o 40"
