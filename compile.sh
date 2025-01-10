@@ -1,5 +1,7 @@
-clang optimized_version.c -o optimized_version.o -O3 -lm
-clang optimized_version.c -o optimized_version_avx.o -O3 -mavx2 -lm
-clang original_version.c -o original_version.o -O3
-clang caseys_version.c -o caseys_version.o -O3 -lm
-clang caseys_version.c -o caseys_version_avx.o -O3 -mavx2 -lm
+clang c/optimized_version.c -o c/optimized_version.o -O3 -lm
+clang c/optimized_version.c -o c/optimized_version_avx.o -O3 -mavx2 -lm
+clang c/original_version.c -o c/original_version.o -O3 -mavx2
+clang c/caseys_version.c -o c/caseys_version.o -O3 -lm
+clang c/caseys_version.c -o c/caseys_version_avx.o -O3 -mavx2 -lm
+javac -g:none jvm/original_version.java
+javac -g:none jvm/optimized_version.java
